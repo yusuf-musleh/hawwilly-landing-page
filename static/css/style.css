@@ -111,19 +111,10 @@ body {
   max-width: 300px;
 }
 
-// .btn-success {
-//     color: black;
-//     background-color: #1bff81;
-//     border-color: #4cae4c;
-
-// }
-
-.btn-success, .btn-success:hover, .btn-success:active, .btn-success:visited {
-    background-color: #1bff81 !important;
-    color: black; !important;
-    border-color: #1bff81 !important;
+.btn {
+  border-color: #1bff81 !important;
 }
 
-.btn-success:hover {
-  background-color: #00cc5c !important;
+.btn:hover{
+  background-color: #ccffe3 !important;
 }
