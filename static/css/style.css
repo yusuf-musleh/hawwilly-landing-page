@@ -115,6 +115,22 @@ body {
   border-color: #1bff81 !important;
 }
 
-.btn:hover{
+.btn:hover {
   background-color: #ccffe3 !important;
+}
+
+.jumbotron {
+  border-color: #1bff81;
+  background-color: white;
+  border-style: dotted;
+}
+
+#form_notify_div {
+  max-width: 350px;
+  float: none;
+  margin: 0 auto;
+}
+
+input {
+  margin-bottom: 10px;
 }
