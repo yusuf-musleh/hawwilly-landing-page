@@ -28,7 +28,7 @@ def notify():
 	sender = os.environ['HAWWILLI_MAIL_USERNAME']
 	recipients = ['yusuf.musleh@gmail.com', 'ysr.sayed@gmail.com']
 	send_email(mail, tilte, message, sender, recipients)
-	return redirect("/")
+	return "Success"
 
 
 

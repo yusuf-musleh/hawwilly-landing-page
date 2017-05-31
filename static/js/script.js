@@ -3,12 +3,31 @@ $(document).ready(function() {
 	display_features();
 
 	$("a").click(function(e) {
-	    var a_tag_clicked = e.target.id;
-	    if (a_tag_clicked.indexOf("get_started") >= 0) {
+		var a_tag_clicked = e.target.id;
+		if (a_tag_clicked.indexOf("get_started") >= 0) {
 			get_started(a_tag_clicked);
-	    }
+		}
 	});
 
+	$("#form_notify_id").submit(function(event) {
+		$('#notify_submit_btn').attr('disabled',true);
+		event.preventDefault();
+
+		$.ajax({
+			type: $("#form_notify_id").attr('method'),
+			url: $("#form_notify_id").attr('action'),
+			data: $("#form_notify_id").serialize(),
+			success: function (data) {
+				$("#form_notify_div").html("<p>thank you for submitting your information, we look forward to contacting you soon!</p>");
+				console.log('Submission was successful.');
+				console.log(data);
+			},
+			error: function (data) {
+				console.log('An error occurred.');
+				console.log(data);
+			},
+		});
+	});
 });
 
 
