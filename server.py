@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request, redirect
 from flask_mail import Mail
 
+from werkzeug.contrib.fixers import ProxyFix
+
 from helpers import send_email
 
 import os
@@ -30,7 +32,7 @@ def notify():
 	send_email(mail, tilte, message, sender, recipients)
 	return "Success"
 
-
+app.wsgi_app = ProxyFix(app.wsgi_app)
 
 if __name__ == "__main__":
     app.run()
