@@ -63,7 +63,7 @@ function display_features() {
 function get_started(a_tag_clicked) {
 	if (a_tag_clicked == "get_started_p1") {
 		mixpanel.track("2.99% + 1QAR Plan Click");
-		selected_plan = "2.99% + 1QAR Plan";
+		selected_plan = "2.99% + 1QAR";
 	}
 	else if (a_tag_clicked == "get_started_p2") {
 		mixpanel.track("2.65% + 0.75QAR Plan Click");
