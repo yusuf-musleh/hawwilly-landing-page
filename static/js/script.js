@@ -71,7 +71,7 @@ function get_started(a_tag_clicked) {
 	}
 	else if (a_tag_clicked == "get_started_p3") {
 		mixpanel.track("Enterprise Plan Clicked");
-		selected_plan = "Enterprise"
+		selected_plan = "Enterprise";
 	}
 
 	$("#plans_and_prices_div").fadeOut("fast", function(){
