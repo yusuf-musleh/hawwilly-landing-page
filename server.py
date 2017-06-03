@@ -26,7 +26,7 @@ def index():
 @app.route("/notify", methods=['POST'])
 def notify():
 	tilte = "New Signup"
-	message = "{} signed up, you can contact him/her through {}".format(request.form['input_name'], request.form['input_email'])
+	message = "{} signed up for ~ {} ~, you can contact him/her through {}".format(request.form['input_name'], request.form['selected_plan'], request.form['input_email'])
 	sender = os.environ['HAWWILLI_MAIL_USERNAME']
 	recipients = ['yusuf.musleh@gmail.com', 'ysr.sayed@gmail.com']
 	send_email(mail, tilte, message, sender, recipients)
